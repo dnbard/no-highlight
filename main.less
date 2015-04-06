@@ -1,0 +1,162 @@
+/* Palette */
+@background: #161617;
+@foreground: #eee;
+@comment:    #888;
+@gray:       #666;
+@white:      #fff;
+@blue:       #779ec5;
+@purple:     #b488bf;
+@red:        #cc6666;
+@orange:     #e0943e;
+@yellow:     #f0c86a;
+@green:      #b5c45f;
+@aqua:       #8abeb7;
+
+/* Selection colors */
+@selection-color-focused:   fade(@blue, 30%);
+@selection-color-unfocused: fade(@gray, 40%);
+
+/* Active line colors */
+@active-line-bgcolor:        fade(@gray, 40%);
+@active-line-number-bgcolor: fade(@gray, 25%);
+@active-line-number-color:   @white;
+
+
+/* Editor styling */
+.cm-keyword        { color: @foreground; }
+.cm-atom           { color: @foreground; }
+.cm-number         { color: @foreground; }
+.cm-def            { color: @foreground; }
+.cm-variable       { color: @foreground; }
+.cm-variable-2     { color: @foreground; }
+.cm-variable-3     { color: @foreground; }
+.cm-operator       { color: @foreground; }
+.cm-comment        { color: @comment; }
+.cm-string         { color: @foreground; }
+.cm-string-2       { color: @foreground; }
+.cm-meta           { color: @foreground; }
+.cm-error          { color: @foreground; }
+.cm-qualifier      { color: @foreground; }
+.cm-builtin        { color: @foreground; }
+.cm-bracket        { color: @foreground; }
+.cm-tag            { color: @foreground; }
+.cm-tag.cm-bracket { color: @foreground }
+.cm-attribute      { color: @foreground; }
+.cm-header         { color: @foreground; }
+.cm-quote          { color: @foreground; }
+.cm-hr             { color: @foreground; }
+.cm-link           { color: @foreground; }
+.cm-strong         { color: @foreground; }
+.cm-em             { color: @foreground; }
+.cm-rangeinfo      { color: @foreground; }
+.cm-minus          { color: @foreground; }
+.cm-plus           { color: @foreground; }
+.cm-property       { color: @foreground; }
+
+.cm-matchhighlight    { border-bottom-color: @foreground; }
+.quick-view-highlight { background-color: fade(@white, 20%); }
+
+.CodeMirror {
+    line-height: 1.32;
+}
+
+.CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-gutters {
+    background-color: darken(@background, 1%);
+}
+
+.CodeMirror-selected {
+    background-color: @selection-color-unfocused;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background-color: @selection-color-focused;
+}
+
+.CodeMirror-searching {
+    background-color: fade(@white, 40%);
+    color: @background !important;
+}
+
+.CodeMirror-searching.searching-current-match {
+    background-color: @white;
+}
+
+.CodeMirror-nonmatchingbracket {
+    background-color: fadeout(@red, 20%);
+    color: @white !important;
+}
+
+.CodeMirror-focused .CodeMirror-nonmatchingbracket {
+    background-color: @red;
+}
+
+.CodeMirror-matchingbracket {
+    background-color: darken(@gray, 10%);
+    color: @white !important;
+}
+
+.CodeMirror-focused .CodeMirror-matchingbracket {
+    background-color: @gray;
+}
+
+.CodeMirror-matchingtag {
+    background-color: darken(@gray, 15%);
+}
+
+.CodeMirror-focused .CodeMirror-matchingtag {
+    background-color: darken(@gray, 10%);
+}
+
+.CodeMirror-gutter-elt {
+    color: @comment !important;
+}
+
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: @foreground !important;
+}
+
+.CodeMirror-activeline .CodeMirror-linenumber {
+    color: @active-line-number-color !important;
+}
+
+.CodeMirror-activeline-background {
+    background-color: fadeout(@active-line-bgcolor, 15%) !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background-color: @active-line-bgcolor !important;
+}
+
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+    background-color: fadeout(@active-line-number-bgcolor, 15%);
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background-color: @active-line-number-bgcolor;
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid @white;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid @white;
+    border-left: none;
+}
+
+
+/* Non-editor styling */
+.not-editor {
+    background-color: @background;
+    transition: background-color 0.15s ease-out;
+}
+
+.image-view {
+    background-color: @background;
+    color: @foreground;
+}

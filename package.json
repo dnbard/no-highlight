@@ -1,0 +1,29 @@
+{
+    "title": "No Highlight",
+    "name": "dnbard.no-highlight",
+    "description": "Dark theme without any syntax highlight support",
+    "keywords": ["dark", "theme", "highlight", "syntax"],
+    "homepage": "https://github.com/dnbard/no-highlight",
+    "license": "MIT",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dnbard/no-highlight.git"
+    },
+
+    "author": {
+        "name": "dnbard",
+        "url": "https://github.com/dnbard"
+    },
+
+    "theme": {
+        "file": "main.less",
+        "dark": true
+    },
+
+    "engines": {
+        "brackets": ">=1.0.0"
+    },
+
+    "version": "1.0.0"
+}
