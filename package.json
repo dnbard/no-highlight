@@ -12,7 +12,7 @@
     },
 
     "author": {
-        "name": "dnbard",
+        "name": "Alex Bardanov",
         "url": "https://github.com/dnbard"
     },
 
@@ -25,5 +25,5 @@
         "brackets": ">=1.0.0"
     },
 
-    "version": "1.0.0"
+    "version": "1.0.1"
 }
